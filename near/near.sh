@@ -17,10 +17,11 @@ read -p 'seedPhrase: ' seedprhase
 near add-credentials $account_id --seedPhrase "$seedprhase"
 
 echo Getting your balance in range of 20 and 60 seconds!
-random_number=$((20 + RANDOM % 60))
 
 while true
 do
+random_number=$((20 + RANDOM % 60))
+echo $random_number
 near state $account_id
 sleep $random_number
 done
