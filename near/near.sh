@@ -21,7 +21,7 @@ echo Getting your balance in range of 20 and 60 seconds!
 while true
 do
 random_number=$((20 + RANDOM % 60))
-echo $random_number
+echo Consulting your balance. Next call will be in $random_number seconds
 near state $account_id
 sleep $random_number
 done
