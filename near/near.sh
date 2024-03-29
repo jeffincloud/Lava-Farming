@@ -12,8 +12,13 @@ export NEAR_MAINNET_RPC=https://near.lava.build/lava-referer-8dacf697-a98b-4b84-
 
 echo  Hi dude!
 echo  Please set your Near AccountId and your seedPhrase
-read -p 'AccountId: ' account_id
-read -p 'seedPhrase: ' seedprhase
+read -p 'AccountId: ' account_id_1
+read -p 'seedPhrase: ' seedprhase_1
+
+# echo Please set the second account credentials
+# read -p 'AccountId #2: ' account_id_2
+# read -p 'seedPhrase #2: ' seedprhase_2
+
 near add-credentials $account_id --seedPhrase "$seedprhase"
 
 echo Getting your balance in range of 20 and 60 seconds!
