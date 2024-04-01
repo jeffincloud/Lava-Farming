@@ -24,9 +24,9 @@ while true
 do
 random_balance=$((20 + RANDOM % 60))
 random_tx=$((60 + RANDOM % 120))
-random_value=$((0.0001 + RANDOM % 0.0005))
+#random_value=$((0.0001 + RANDOM % 0.0005))
 echo "sending $random_value near to your other wallet. next tx will be in $random_tx seconds"
-near send-near $account_id $receiver $random_value --networkId mainnet
+near send-near $account_id $receiver 0.0001 --networkId mainnet
 sleep $random_tx
 echo "Consulting your balance. Next call will be in $random_balance seconds"
 near state $account_id
