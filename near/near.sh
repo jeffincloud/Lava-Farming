@@ -10,23 +10,25 @@ export NEAR_NETWORK=mainnet
 export NEAR_MAINNET_RPC=https://near.lava.build/lava-referer-8dacf697-a98b-4b84-bc0a-6782688c9bf3/
 
 
-echo  Hi dude!
-echo  Please set your Near AccountId and your seedPhrase
-read -p 'AccountId: ' account_id_1
-read -p 'seedPhrase: ' seedprhase_1
-
-# echo Please set the second account credentials
-# read -p 'AccountId #2: ' account_id_2
-# read -p 'seedPhrase #2: ' seedprhase_2
-
+echo  "Hi dude!"
+echo  "Please set your Near AccountId and your seedPhrase"
+read -p 'AccountId: ' account_id
+read -p 'seedPhrase: ' seedprhase
+read -p 'Write the accountId of the receiver account: ' receiver
 near add-credentials $account_id --seedPhrase "$seedprhase"
 
-echo Getting your balance in range of 20 and 60 seconds!
+echo "login-in to MyNeatWallet..."
+near login --networkId mainnet
 
 while true
 do
-random_number=$((20 + RANDOM % 60))
-echo Consulting your balance. Next call will be in $random_number seconds
+random_balance=$((20 + RANDOM % 60))
+random_tx=$((60 + RANDOM % 120))
+random_value=$((0.0001 + RANDOM % 0.0005))
+echo "sending $random_value near to your other wallet. next tx will be in $random_tx seconds"
+near send-near $account_id $receiver $random_value --networkId mainnet
+sleep $random_tx
+echo "Consulting your balance. Next call will be in $random_balance seconds"
 near state $account_id
-sleep $random_number
+sleep $random_balance
 done
