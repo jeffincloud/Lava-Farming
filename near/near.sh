@@ -24,7 +24,7 @@ while true
 do
 random_balance=$((20 + RANDOM % 60))
 random_tx=$((60 + RANDOM % 120))
-random_value=$(python3 -c "import random; print(round(random.uniform(0.00000, 0.00098), 5))")
+random_value=$(python3 -c "import random; print(round(random.uniform(0.0001, 0.0008), 4))")
 echo "sending $random_value near to your other wallet. next tx will be in $random_tx seconds"
 near send-near $account_id $receiver $random_value --networkId mainnet
 sleep $random_tx
