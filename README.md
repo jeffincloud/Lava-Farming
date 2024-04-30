@@ -1,3 +1,13 @@
+### Lava Farming
+
+###### Somedays ago I found this:
+
+Lava, the Modular Access layer for different blockchain projects just released an incentivzed points program. This program basically rewards with points to users that interact with their daily basis blockchains such as Ethereum, Axelar, Near... etc but instead of using your default wallet's RPC endpoints you will use the ones that Lava gives you.
+
+Basically you will put Lava blockchains as an intermediate to interact with your blockchains. I know it sounds kind of weird but todays crypto is basically using the web2 infrastructure that has been alive for some years.
+
+I created two scripts to automate the Near and Ethereum ones and get as much points as possible.
+
 **Important note: I only could user the Near one for a couple of weeks. It seems that now Lava is using CloudFlare and all the CLI's requests pointing to the lava domain are being rejected. I thought this was only with my script but some other friends noticed the same behaviour with my script.**
 
 **How Near Script Works:**
