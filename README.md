@@ -1,6 +1,6 @@
 ### Lava Farming
 
-###### Somedays ago I found this:
+###### Sometime ago I discovered Lava and their points program:
 
 Lava, the Modular Access layer for different blockchain projects just released an incentivzed points program. This program basically rewards with points to users that interact with their daily basis blockchains such as Ethereum, Axelar, Near... etc but instead of using your default wallet's RPC endpoints you will use the ones that Lava gives you.
 
